@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-
+import { Searchbar, Sidebar, MusicPlayer, TopPlay } from '../components';
 import { Error, Loader, SongCard } from '../components';
 import { genres } from '../assets/constants';
 import { selectGenreListId } from '../redux/features/playerSlice';
@@ -19,8 +19,10 @@ const Discover = () => {
     return (
         <div className="flex flex-col">
             {/* header */}
+            <Searchbar/>
             <div className="w-full flex justify-between items-center
              sm:flex-row flex-col mt-4 mb-10">
+
 
                 {/* title */}
                 <h2 className='font-bold text-3xl text-white text-left'>Discover {genreTitle}</h2>
